@@ -1,0 +1,84 @@
+body {
+	background-image: url("../images/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	position: relative;
+	font-family: "Lato", Arial, sans-serif;
+}
+
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.form-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	width: 28%;
+	margin: 0 auto;
+}
+
+.login-form .form-control {
+	background: rgba(255, 255, 255, 0.08);
+	padding: 0 20px;
+	border-radius: 40px;
+	border: 1px solid transparent;
+	height: 50px;
+	color: white;
+}
+
+.login-form .form-control::placeholder {
+	color: white;
+}
+
+.login-form .form-control:hover, .login-form .form-control:focus {
+	background: transparent;
+	outline: none;
+	box-shadow: none;
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-form .btn.btn-primary {
+	background: #fbceb5 !important;
+	border: 1px solid #fbceb5 !important;
+	color: #000 !important;
+}
+
+.login-form .checkbox-wrap {
+	position: relative;
+	cursor: pointer;
+	padding-left: 34px;
+}
+
+.login-form .checkbox-wrap input {
+	position: absolute;
+	opacity: 0;
+	height: 0;
+	width: 0;
+}
+
+.login-form .checkbox-wrap .checkmark{
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	background: rgba(0,0,0,0.5);
+	left: -5px;
+	border-radius: 4px;
+}
+.login-form .checkbox-wrap input:checked ~ .checkmark{
+	background: #fbceb5;
+}
+.login-form .checkbox-wrap input:checked ~ .checkmark:after {
+	content: '\2714';
+	display: block;
+	position: absolute;
+	color: black;
+	left: 5px;
+}
